@@ -1,0 +1,224 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #FAFAFA;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#menu-bar {
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+#menu-bar>div {
+    padding: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#menu-bar>div:hover, #menu-bar>div.selected {
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+#menu-content-container {
+    display: flex;
+    flex-direction: row;
+    height: 75px;
+}
+
+#menu-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-group {
+    display: flex;
+    flex-direction: column;
+    border-right: 0.5px solid lightgray;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.menu-row {
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+}
+
+.menu-row>* {
+    margin: 2.5px 5px;
+    cursor: pointer;
+    border: 0.5px solid lightgrey;
+    border-radius: 2px;
+    height: 26;
+}
+
+.menu-row>input {
+    width: 35px;
+}
+
+.menu-row>input:hover {
+    transform: scale(1.2);
+}
+
+#font-family {
+    width: 125px;
+    font-size: 12px;
+}
+
+#font-size {
+    width: 80px;
+    font-size: 12px;
+}
+
+#bold.selected, #italic.selected, #underline.selected {
+    background-color: teal;
+    color: white;
+}
+
+#alignmnet-menu-container input.selected{
+    box-shadow: teal -2px -2px;
+}
+
+#formula-bar {
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    box-sizing: border-box;
+    border: 0.5px solid black;
+}
+
+#formula-bar>#cellformula {
+    flex: 3%;
+}
+
+#formula-bar>#separator {
+    flex: 1%;
+    text-align: center;
+    box-sizing: border-box;
+    border: 0.5px solid black;
+}
+
+#formula-bar>#textformula {
+    flex: 96%;
+}
+
+#content-container {
+    position: relative;
+    height: calc(100vh - 150px);
+    overflow: auto;
+}
+
+#tl-cell {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 25px;
+    width: 25px;
+    background-color: lightgrey;
+    z-index: 2;
+}
+
+#first-row {
+    position: absolute;
+    left: 25px;
+    height: 25px;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+}
+
+#first-col {
+    position: absolute;
+    top: 25px;
+    width: 25px;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+#grid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.cell {
+    width: 100px;
+    border: 0.5px solid lightgrey;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: cell;
+    line-height: 25px;
+    font-size: 11px;
+    border-radius: 2px;
+}
+
+.cell.selected{
+    border: 1px solid teal;
+}
+
+#first-col .cell {
+    width: 25px;
+    text-align: center;
+    font-size: 14px;
+    padding-left: 0px;
+    box-sizing: border-box;
+    border: 0.5px solid white;
+}
+
+#first-row .cell {
+    width: 100px;
+    font-size: 14px;
+    text-align: center;
+    padding-left: 0px;
+    box-sizing: border-box;
+    border: 0.5px solid white;
+}
+
+#sheets-bar {
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+}
+
+#sheets-bar>div {
+    padding: 2px;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#sheets-bar>div:hover {
+    border-bottom: 1px solid lightgrey;
+    border-left: 1px solid grey;
+}
+
+#sheets-bar>#add {
+    width: 20px;
+    text-align: center;
+}

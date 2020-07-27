@@ -1,0 +1,19 @@
+{
+  "name": "excel-clone",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ejs-electron": "^2.0.3",
+    "electron": "^9.0.2"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
+  },
+  "description": ""
+}
